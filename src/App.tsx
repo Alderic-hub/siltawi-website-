@@ -78,19 +78,17 @@ export default function App() {
       setCurrentPage('home');
       setTimeout(() => {
         scrollToSection(sectionId);
-      }, 100);
+      }, 150);
     } else {
       scrollToSection(sectionId);
     }
   };
 
-  const scrollToSection = (sectionId: string) => {
+  const scrollToSection = (sectionId: string, attempts = 0) => {
     const element = document.getElementById(sectionId);
     if (element) {
       const offset = 80; // Compensates for the fixed header height context
-      const bodyRect = document.body.getBoundingClientRect().top;
-      const elementRect = element.getBoundingClientRect().top;
-      const elementPosition = elementRect - bodyRect;
+      const elementPosition = element.getBoundingClientRect().top + window.scrollY;
       const offsetPosition = elementPosition - offset;
 
       window.scrollTo({
@@ -98,6 +96,10 @@ export default function App() {
         behavior: 'smooth'
       });
       setActiveSection(sectionId);
+    } else if (attempts < 5) {
+      setTimeout(() => {
+        scrollToSection(sectionId, attempts + 1);
+      }, 80);
     }
   };
 

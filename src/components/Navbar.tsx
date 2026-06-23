@@ -18,7 +18,15 @@ export default function Navbar({ activeSection, onNavigate, currentPage, onNavig
   const [isScrolled, setIsScrolled] = useState(false);
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
   const [isAboutDropdownOpen, setIsAboutDropdownOpen] = useState(false);
+  const [isMobileAboutOpen, setIsMobileAboutOpen] = useState(false);
   const dropdownRef = useRef<HTMLDivElement>(null);
+
+  // Auto-set mobile about expansion based on current page when menu opens
+  useEffect(() => {
+    if (isMobileMenuOpen) {
+      setIsMobileAboutOpen(['about-us', 'team', 'faq'].includes(currentPage));
+    }
+  }, [isMobileMenuOpen, currentPage]);
 
   useEffect(() => {
     const handleScroll = () => {
@@ -70,8 +78,8 @@ export default function Navbar({ activeSection, onNavigate, currentPage, onNavig
     <header
       id="navbar-header"
       className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${
-        isScrolled || currentPage !== 'home'
-          ? 'bg-white/90 backdrop-blur-md shadow-sm border-b border-slate-100 py-3'
+        isScrolled || currentPage !== 'home' || isMobileMenuOpen
+          ? 'bg-white/95 backdrop-blur-md shadow-sm border-b border-slate-100 py-3'
           : 'bg-transparent py-5'
       }`}
     >
@@ -93,7 +101,7 @@ export default function Navbar({ activeSection, onNavigate, currentPage, onNavig
           </button>
 
           {/* Desktop Navigation Link Items */}
-          <nav id="desktop-nav" className="hidden md:flex items-center gap-1">
+          <nav id="desktop-nav" className="hidden lg:flex items-center gap-1">
             {/* Home */}
             <button
               id="nav-link-home"
@@ -289,7 +297,7 @@ export default function Navbar({ activeSection, onNavigate, currentPage, onNavig
             <button
               id="mobile-menu-toggle"
               onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
-              className="p-2 rounded-xl text-slate-600 hover:text-slate-900 hover:bg-slate-50 md:hidden cursor-pointer"
+              className="p-2 rounded-xl text-slate-600 hover:text-slate-900 hover:bg-slate-50 lg:hidden cursor-pointer"
               aria-label="Toggle menu"
             >
               {isMobileMenuOpen ? <X className="w-6 h-6" /> : <Menu className="w-6 h-6" />}
@@ -307,7 +315,7 @@ export default function Navbar({ activeSection, onNavigate, currentPage, onNavig
             animate={{ opacity: 1, height: 'auto' }}
             exit={{ opacity: 0, height: 0 }}
             transition={{ duration: 0.25, ease: 'easeInOut' }}
-            className="md:hidden bg-white border-b border-slate-100 overflow-hidden text-left"
+            className="lg:hidden bg-white border-b border-slate-100 overflow-hidden text-left"
           >
             <div id="mobile-nav-box" className="px-4 pt-2 pb-6 space-y-1">
               
@@ -329,24 +337,66 @@ export default function Navbar({ activeSection, onNavigate, currentPage, onNavig
               </button>
 
               {/* Collapsible About Dropdown */}
-              <div className="border-y border-slate-100/70 py-1.5 space-y-1">
-                <span className="block px-4 py-2 text-[10px] font-extrabold text-slate-400 tracking-widest font-mono uppercase">ABOUT SILTAWI</span>
-                {aboutSubMenu.map((sub, sIdx) => {
-                  const isSubActive = currentPage === sub.page;
-                  return (
-                    <button
-                      key={sIdx}
-                      onClick={() => handleDropdownPageClick(sub.page)}
-                      className={`block w-full text-left px-6 py-2.5 text-xs font-bold uppercase tracking-wider rounded-lg transition-all ${
-                        isSubActive
-                          ? 'bg-brand-coral/10 text-brand-coral'
-                          : 'text-slate-500 hover:bg-slate-50'
+              <div className="space-y-1">
+                <div id="mobile-about-button-group" className="flex items-center justify-between w-full rounded-xl overflow-hidden border border-transparent">
+                  <button
+                    id="mobile-link-about"
+                    onClick={() => handleLinkClick('about')}
+                    className={`flex-1 text-left px-4 py-3 text-sm font-bold uppercase tracking-wider rounded-l-xl transition-all ${
+                      (currentPage === 'home' && activeSection === 'about') || ['about-us', 'team', 'faq'].includes(currentPage)
+                        ? 'bg-brand-coral/10 text-brand-coral font-extrabold'
+                        : 'text-slate-600 hover:bg-slate-50'
+                    }`}
+                  >
+                    About
+                  </button>
+                  <button
+                    id="mobile-link-about-arrow"
+                    onClick={() => setIsMobileAboutOpen(!isMobileAboutOpen)}
+                    className={`px-4 py-3 rounded-r-xl transition-all flex items-center justify-center border-l ${
+                      (currentPage === 'home' && activeSection === 'about') || ['about-us', 'team', 'faq'].includes(currentPage)
+                        ? 'bg-brand-coral/10 text-brand-coral border-brand-coral/10'
+                        : 'text-slate-600 hover:bg-slate-50 border-slate-100'
+                    }`}
+                    aria-label="Toggle About Submenu"
+                  >
+                    <ChevronDown
+                      className={`w-4 h-4 transition-transform duration-300 ${
+                        isMobileAboutOpen ? 'rotate-180' : ''
                       }`}
+                    />
+                  </button>
+                </div>
+
+                <AnimatePresence initial={false}>
+                  {isMobileAboutOpen && (
+                    <motion.div
+                      id="mobile-about-submenu"
+                      initial={{ opacity: 0, height: 0 }}
+                      animate={{ opacity: 1, height: 'auto' }}
+                      exit={{ opacity: 0, height: 0 }}
+                      transition={{ duration: 0.25, ease: 'easeInOut' }}
+                      className="overflow-hidden pl-4 pr-1 space-y-1 border-l border-slate-100 ml-5 mt-1"
                     >
-                      {sub.label}
-                    </button>
-                  );
-                })}
+                      {aboutSubMenu.map((sub, sIdx) => {
+                        const isSubActive = currentPage === sub.page;
+                        return (
+                          <button
+                            key={sIdx}
+                            onClick={() => handleDropdownPageClick(sub.page)}
+                            className={`block w-full text-left px-4 py-2.5 text-xs font-bold uppercase tracking-wider rounded-lg transition-all ${
+                              isSubActive
+                                ? 'bg-brand-coral/10 text-brand-coral'
+                                : 'text-slate-500 hover:bg-slate-50'
+                            }`}
+                          >
+                            {sub.label}
+                          </button>
+                        );
+                      })}
+                    </motion.div>
+                  )}
+                </AnimatePresence>
               </div>
 
               {/* Services */}

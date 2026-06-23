@@ -7,14 +7,14 @@ import { Flame, Shield, Compass, Sparkles, Box, ShoppingBag, Globe, Zap } from '
 
 export default function TrustedBusinesses() {
   const businesses = [
-    { name: 'Abyssinia Brew', icon: Flame, color: 'text-amber-500', hoverColor: 'group-hover:text-amber-600' },
-    { name: 'Zemen Tech', icon: Shield, color: 'text-blue-500', hoverColor: 'group-hover:text-blue-600' },
-    { name: 'Lucy Logistics', icon: Box, color: 'text-sky-500', hoverColor: 'group-hover:text-sky-600' },
-    { name: 'Awash Apparel', icon: Compass, color: 'text-orange-500', hoverColor: 'group-hover:text-orange-600' },
-    { name: 'Sheger Express', icon: Sparkles, color: 'text-purple-500', hoverColor: 'group-hover:text-purple-600' },
-    { name: 'Habesha Market', icon: ShoppingBag, color: 'text-rose-500', hoverColor: 'group-hover:text-rose-600' },
-    { name: 'Nile FinTech', icon: Zap, color: 'text-yellow-500', hoverColor: 'group-hover:text-yellow-600' },
-    { name: 'Saba Creative', icon: Globe, color: 'text-emerald-500', hoverColor: 'group-hover:text-emerald-600' },
+    { name: 'Abyssinia Brew', icon: Flame, color: 'text-slate-450 text-slate-400/80', hoverColor: 'group-hover:text-brand-purple' },
+    { name: 'Zemen Tech', icon: Shield, color: 'text-slate-450 text-slate-400/80', hoverColor: 'group-hover:text-brand-purple' },
+    { name: 'Lucy Logistics', icon: Box, color: 'text-slate-450 text-slate-400/80', hoverColor: 'group-hover:text-brand-purple' },
+    { name: 'Awash Apparel', icon: Compass, color: 'text-slate-450 text-slate-400/80', hoverColor: 'group-hover:text-brand-purple' },
+    { name: 'Sheger Express', icon: Sparkles, color: 'text-slate-450 text-slate-400/80', hoverColor: 'group-hover:text-brand-purple' },
+    { name: 'Habesha Market', icon: ShoppingBag, color: 'text-slate-450 text-slate-400/80', hoverColor: 'group-hover:text-brand-purple' },
+    { name: 'Nile FinTech', icon: Zap, color: 'text-slate-450 text-slate-400/80', hoverColor: 'group-hover:text-brand-purple' },
+    { name: 'Saba Creative', icon: Globe, color: 'text-slate-450 text-slate-400/80', hoverColor: 'group-hover:text-brand-purple' },
   ];
 
   // Duplicating brands multiple times to ensure continuous seamless CSS slide

@@ -42,8 +42,10 @@ export default function Services({ onNavigatePage }: ServicesProps) {
           <h2 className="text-3xl sm:text-4xl lg:text-5xl font-extrabold text-slate-900 font-display tracking-tight leading-[1.12]">
             Our Services
           </h2>
-          <p className="mt-4 text-slate-600 font-light leading-relaxed text-base sm:text-lg">
-            We don’t just offer generic packages. Siltawi Digital designs data-backed creative experiences that establish lasting corporate authority, streamline transaction collections, and generate direct customer pipelines.
+          <p className="mt-4 text-slate-600 font-light leading-relaxed text-base sm:text-lg max-w-2xl mx-auto">
+            We go beyond generic packages to design strategic digital experiences<br className="hidden md:inline" />
+            that build your brand authority, attract the right audience, and<br className="hidden md:inline" />
+            turn attention into real customer growth.
           </p>
         </div>
 
@@ -67,9 +69,9 @@ export default function Services({ onNavigatePage }: ServicesProps) {
                 whileHover={{ y: -6 }}
                 // If the item lies alone in the 3rd column of the 2nd row (4th and 5th items), 
                 // we keep it beautifully unified or can optionally span md grids. 
-                className="relative bg-white border-2 border-slate-200/70 hover:border-brand-coral rounded-[32px] overflow-hidden flex flex-col justify-between group transition-all duration-300 hover:shadow-xl hover:shadow-brand-coral/5 hover:bg-brand-coral/[0.015] w-full"
+                className="relative bg-white border-2 border-brand-mist hover:border-brand-coral rounded-[32px] overflow-hidden flex flex-col justify-between group transition-all duration-300 hover:shadow-xl hover:shadow-brand-coral/5 hover:bg-brand-coral/5 w-full"
               >
-                {/* Visual Header containing OPTION badge and beautiful descriptive image */}
+                {/* Visual Header containing beautiful descriptive image */}
                 <div className="relative h-48 sm:h-52 overflow-hidden w-full bg-slate-100">
                   <img
                     src={cardImage}
@@ -79,11 +81,6 @@ export default function Services({ onNavigatePage }: ServicesProps) {
                   />
                   {/* Visual gradient filter overlaid above the image */}
                   <div className="absolute inset-0 bg-gradient-to-t from-slate-950/40 via-transparent to-transparent pointer-events-none" />
-
-                  {/* Top-left Option badge mimicking the infographic exact layout */}
-                  <div className="absolute top-4 left-4 px-4 py-2 bg-brand-coral text-white font-display text-[9px] font-extrabold tracking-widest rounded-full uppercase shadow-md select-none z-10">
-                    SERVICE 0{idx + 1}
-                  </div>
                 </div>
 
                 {/* Card Content Interior Body */}
@@ -118,8 +115,7 @@ export default function Services({ onNavigatePage }: ServicesProps) {
                 </div>
 
                 {/* Card Action footer (fully aligned at base of interior card structure) */}
-                <div className="px-6 py-5 sm:px-8 border-t border-slate-100 flex items-center justify-between w-full bg-slate-50/50">
-                  <span className="text-[9px] font-bold tracking-wider text-slate-400 uppercase">Capabilities Matrix</span>
+                <div className="px-6 py-5 sm:px-8 border-t border-slate-100 flex items-center justify-center w-full bg-slate-50/50">
                   <button
                     onClick={() => {
                       onNavigatePage('service-details', srv.id);

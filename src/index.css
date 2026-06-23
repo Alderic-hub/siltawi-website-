@@ -10,9 +10,10 @@
   --color-brand-purple: #872675;
   --color-brand-coral: #F05253;
   --color-brand-gold: #F8D424;
-  --color-brand-orange: #F05253; /* Fallback for legacy orange */
-  --color-brand-teal: #0d9488;
-  --color-brand-indigo: #872675; /* Fallback for legacy indigo */
+  --color-brand-deep-plum: #54134A;
+  --color-brand-slate: #1E293B;
+  --color-brand-alabaster: #FCFCFD;
+  --color-brand-mist: #E7E5E4;
 }
 
 html {

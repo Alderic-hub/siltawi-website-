@@ -39,16 +39,18 @@ export default function About({ onNavigatePage }: AboutProps) {
           {/* Right: Layered overlay text card (sitting partially on top on lg screen, partially in white space) */}
           <div className="lg:col-span-6 lg:-ml-20 xl:-ml-28 z-20 relative">
             <div className="bg-white/95 backdrop-blur-md border border-slate-100 shadow-xl p-8 sm:p-12 rounded-[32px] space-y-6">
-              <div className="inline-flex items-center gap-1.5 px-3 py-1 bg-brand-coral/5 border border-brand-coral/20 text-brand-coral text-[10px] font-bold uppercase tracking-widest rounded-full">
-                About Our Agency
+              <div id="about-agency-badge-wrapper" className="flex justify-center">
+                <div className="inline-flex items-center gap-1.5 px-3 py-1 bg-brand-coral/5 border border-brand-coral/20 text-brand-coral text-[10px] font-bold uppercase tracking-widest rounded-full">
+                  About Our Agency
+                </div>
               </div>
               
-              <h2 className="text-2xl sm:text-3xl lg:text-4xl font-extrabold text-slate-900 font-display tracking-tight leading-[1.12]">
-                We don't follow digital trends. We create digital authority that converts.
+              <h2 className="text-2xl sm:text-3xl lg:text-4xl font-extrabold text-slate-900 font-display tracking-tight leading-[1.12] text-center">
+                We turn brands into digital experiences people can’t ignore.
               </h2>
               
               <p className="text-slate-600 font-light leading-relaxed text-sm sm:text-base">
-                From our creative production studios in Addis Ababa, Siltawi Digital launches high-converting campaigns, codes robust company web interfaces, and crafts visual brand signatures that leave others behind. We turn visibility into lasting business growth.
+                From our creative studio in Addis Ababa, we help businesses transform their ideas into powerful digital experiences that attract attention, build trust, and drive growth. Through strategic campaigns, high-performance websites, and distinctive brand identities, we create digital solutions that go beyond visibility — helping you establish authority, stand out in your industry, and become impossible to ignore.
               </p>
               
               <div className="pt-2">
