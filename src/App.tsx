@@ -106,7 +106,7 @@ export default function App() {
   const selectedServiceObj = SERVICES.find(s => s.id === selectedServiceId);
 
   return (
-    <div id="siltawi-root-layout" className="min-h-screen text-slate-800 bg-white selection:bg-brand-coral selection:text-white pb-0">
+    <div id="siltawi-root-layout" className="min-h-screen text-slate-800 bg-white selection:bg-brand-coral selection:text-white pb-0 overflow-x-hidden">
       
       {/* Sticky Header Navigation bar */}
       <Navbar

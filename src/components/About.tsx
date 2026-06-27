@@ -20,7 +20,7 @@ export default function About({ onNavigatePage }: AboutProps) {
           
           {/* Left: Descriptive workspace image */}
           <div className="lg:col-span-6 relative">
-            <div className="relative rounded-[32px] overflow-hidden shadow-2xl aspect-[4/3] sm:aspect-[16/10] lg:aspect-[1/1] xl:aspect-[4/3]">
+            <div className="relative rounded-2xl overflow-hidden shadow-2xl aspect-[4/3] sm:aspect-[16/10] lg:aspect-[1/1] xl:aspect-[4/3]">
               <img
                 src="https://images.unsplash.com/photo-1522071820081-009f0129c71c?auto=format&fit=crop&q=80&w=1200"
                 alt="Siltawi Creative Coding Space"
@@ -38,7 +38,7 @@ export default function About({ onNavigatePage }: AboutProps) {
 
           {/* Right: Layered overlay text card (sitting partially on top on lg screen, partially in white space) */}
           <div className="lg:col-span-6 lg:-ml-20 xl:-ml-28 z-20 relative">
-            <div className="bg-white/95 backdrop-blur-md border border-slate-100 shadow-xl p-8 sm:p-12 rounded-[32px] space-y-6">
+            <div className="bg-white/95 backdrop-blur-md border border-slate-100 shadow-xl p-8 sm:p-12 rounded-2xl space-y-6">
               <div id="about-agency-badge-wrapper" className="flex justify-center">
                 <div className="inline-flex items-center gap-1.5 px-3 py-1 bg-brand-coral/5 border border-brand-coral/20 text-brand-coral text-[10px] font-bold uppercase tracking-widest rounded-full">
                   About Our Agency

@@ -84,7 +84,7 @@ export default function Testimonials() {
               {/* Card 1 */}
               <div
                 id={`testimonial-card-1-${activeTestimonial1.id}`}
-                className="w-full bg-slate-50 border border-slate-100 p-6 sm:p-10 rounded-[36px] shadow-sm flex flex-col justify-between items-center relative text-center"
+                className="w-full bg-slate-50 border border-slate-100 p-6 sm:p-10 rounded-2xl shadow-sm flex flex-col justify-between items-center relative text-center"
               >
                 {/* Floating Quote graphic watermark */}
                 <div className="absolute -top-5 right-10 w-11 h-11 bg-brand-coral hover:scale-105 text-white flex items-center justify-center rounded-xl transition-all shadow-md">
@@ -125,7 +125,7 @@ export default function Testimonials() {
               {/* Card 2 (Desktop only) */}
               <div
                 id={`testimonial-card-2-${activeTestimonial2.id}`}
-                className="hidden md:flex w-full bg-slate-50 border border-slate-100 p-6 sm:p-10 rounded-[36px] shadow-sm flex flex-col justify-between items-center relative text-center"
+                className="hidden md:flex w-full bg-slate-50 border border-slate-100 p-6 sm:p-10 rounded-2xl shadow-sm flex flex-col justify-between items-center relative text-center"
               >
                 {/* Floating Quote graphic watermark */}
                 <div className="absolute -top-5 right-10 w-11 h-11 bg-brand-coral hover:scale-105 text-white flex items-center justify-center rounded-xl transition-all shadow-md">

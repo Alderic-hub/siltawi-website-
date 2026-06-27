@@ -68,7 +68,7 @@ export default function AboutUsPage({ onBackToHome }: AboutUsPageProps) {
               Over the last few years, we've successfully delivered over 100 digital projects, helping local firms scale operations and establish stable revenue.
             </p>
           </div>
-          <div className="lg:col-span-5 bg-slate-50 border border-slate-100 p-8 rounded-[32px] space-y-4">
+          <div className="lg:col-span-5 bg-slate-50 border border-slate-100 p-8 rounded-2xl space-y-4">
             <span className="text-[10px] font-bold text-brand-coral uppercase tracking-widest font-mono block">
               Quick Highlights
             </span>
@@ -97,7 +97,7 @@ export default function AboutUsPage({ onBackToHome }: AboutUsPageProps) {
         <div id="about-tabs-row" className="grid grid-cols-1 lg:grid-cols-12 gap-12 items-stretch pt-12 border-t border-slate-100">
           
           {/* Tabs Selector Side Pane */}
-          <div id="about-tabs-pane" className="lg:col-span-4 flex flex-col justify-between p-6 bg-slate-50 rounded-3xl border border-slate-100">
+          <div id="about-tabs-pane" className="lg:col-span-4 flex flex-col justify-between p-6 bg-slate-50 rounded-2xl border border-slate-100">
             <div className="flex flex-col space-y-2">
               <span className="text-xs font-bold text-slate-400 uppercase tracking-wider block mb-4 font-mono">
                 Corporate Foundations
@@ -144,7 +144,7 @@ export default function AboutUsPage({ onBackToHome }: AboutUsPageProps) {
           </div>
 
           {/* Tab Screen Content display with micro transitions */}
-          <div id="about-tabs-content" className="lg:col-span-8 bg-slate-50/50 rounded-3xl border border-slate-100 p-8 flex flex-col justify-center min-h-[300px]">
+          <div id="about-tabs-content" className="lg:col-span-8 bg-slate-50/50 rounded-2xl border border-slate-100 p-8 flex flex-col justify-center min-h-[300px]">
             <AnimatePresence mode="wait">
               {activeTab === 'mission' && (
                 <motion.div

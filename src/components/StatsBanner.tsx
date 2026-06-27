@@ -70,7 +70,7 @@ export default function StatsBanner() {
         <div 
           ref={containerRef}
           id="animated-stats-banner" 
-          className="bg-gradient-to-br from-slate-900 to-brand-purple/50 text-white rounded-[32px] p-8 md:p-12 shadow-xl relative overflow-hidden flex flex-col justify-center"
+          className="bg-gradient-to-br from-slate-900 to-brand-purple/50 text-white rounded-2xl p-8 md:p-12 shadow-xl relative overflow-hidden flex flex-col justify-center"
         >
           <div id="banner-mesh" className="absolute inset-0 bg-[radial-gradient(ellipse_60%_50%_at_50%_40%,#F05253_15%,transparent_75%)] opacity-30 pointer-events-none" />
           

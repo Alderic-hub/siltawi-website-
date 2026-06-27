@@ -34,7 +34,7 @@ export default function Team() {
             <div
               id={`team-card-${member.id}`}
               key={member.id}
-              className="bg-white border border-slate-200/60 rounded-[32px] p-6 flex flex-col justify-between hover:border-brand-coral/20 transition-all hover:shadow-xl duration-300 group"
+              className="bg-white border border-slate-200/60 rounded-2xl p-6 flex flex-col justify-between hover:border-brand-coral/20 transition-all hover:shadow-xl duration-300 group"
             >
               <div>
                 {/* Member Avatar Container with hovering reveal blur effects */}

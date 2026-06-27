@@ -41,10 +41,10 @@ export default function Footer({ onNavigate, onNavigatePage }: FooterProps) {
       <div id="footer-container" className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         
         {/* Main Footer columns row */}
-        <div id="footer-columns-row" className="grid grid-cols-1 md:grid-cols-12 gap-10 pb-12 border-b border-slate-900">
+        <div id="footer-columns-row" className="grid grid-cols-2 lg:grid-cols-12 gap-10 pb-12 border-b border-slate-900">
           
           {/* Column 1 - Brand Summary */}
-          <div className="md:col-span-4 flex flex-col space-y-5">
+          <div className="col-span-2 lg:col-span-4 flex flex-col space-y-5">
             <div className="flex items-center">
               <img
                 src="/siltawi_logo.svg"
@@ -80,7 +80,7 @@ export default function Footer({ onNavigate, onNavigatePage }: FooterProps) {
           </div>
 
           {/* Column 2 - Category Quick links */}
-          <div className="md:col-span-3 text-left">
+          <div className="col-span-1 lg:col-span-3 text-left">
             <h4 className="text-white text-xs font-bold font-mono tracking-widest uppercase mb-5">
               Enterprise Map
             </h4>
@@ -100,7 +100,7 @@ export default function Footer({ onNavigate, onNavigatePage }: FooterProps) {
           </div>
 
           {/* Column 3 - Dedicated Sub-Pages Routing Links */}
-          <div className="md:col-span-2 text-left">
+          <div className="col-span-1 lg:col-span-2 text-left">
             <h4 className="text-white text-xs font-bold font-mono tracking-widest uppercase mb-5">
               Resources
             </h4>
@@ -133,7 +133,7 @@ export default function Footer({ onNavigate, onNavigatePage }: FooterProps) {
           </div>
 
           {/* Column 4 - Detailed Office Coordinates */}
-          <div className="md:col-span-3 text-left space-y-4">
+          <div className="col-span-2 lg:col-span-3 text-left space-y-4">
             <h4 className="text-white text-xs font-bold font-mono tracking-widest uppercase mb-1">
               Siltawi Office Hub
             </h4>
@@ -167,10 +167,10 @@ export default function Footer({ onNavigate, onNavigatePage }: FooterProps) {
         {/* Lower copyright bar with Back To Top trigger */}
         <div id="footer-bottom-row" className="flex flex-col sm:flex-row justify-between items-center gap-6 pt-8 text-center sm:text-left">
           <div className="space-y-1">
-            <p className="text-xs text-slate-500 font-light">
+            <p className="text-xs text-slate-400 font-light">
               &copy; {currentYear} Siltawi Digital Marketing plc. All rights reserved.
             </p>
-            <p className="text-[10px] text-slate-600 font-mono">
+            <p className="text-[10px] text-slate-500 font-mono">
               Designed & Developed in Addis Ababa, Ethiopia • Founded 2023
             </p>
           </div>

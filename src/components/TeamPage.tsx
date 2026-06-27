@@ -52,7 +52,7 @@ export default function TeamPage({ onBackToHome }: TeamPageProps) {
                 initial={{ opacity: 0, y: 30 }}
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.6, delay: idx * 0.1 }}
-                className="bg-white border border-slate-200/60 shadow-sm rounded-[32px] overflow-hidden group hover:shadow-xl hover:border-brand-coral/25 transition-all duration-300"
+                className="bg-white border border-slate-200/60 shadow-sm rounded-2xl overflow-hidden group hover:shadow-xl hover:border-brand-coral/25 transition-all duration-300"
               >
                 {/* Image Wrap */}
                 <div className="relative overflow-hidden aspect-square sm:aspect-[4/3] bg-slate-100">

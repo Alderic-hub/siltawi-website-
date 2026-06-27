@@ -69,7 +69,7 @@ export default function Services({ onNavigatePage }: ServicesProps) {
                 whileHover={{ y: -6 }}
                 // If the item lies alone in the 3rd column of the 2nd row (4th and 5th items), 
                 // we keep it beautifully unified or can optionally span md grids. 
-                className="relative bg-white border-2 border-brand-mist hover:border-brand-coral rounded-[32px] overflow-hidden flex flex-col justify-between group transition-all duration-300 hover:shadow-xl hover:shadow-brand-coral/5 hover:bg-brand-coral/5 w-full"
+                className="relative bg-white border-2 border-brand-mist hover:border-brand-coral rounded-2xl overflow-hidden flex flex-col justify-between group transition-all duration-300 hover:shadow-xl hover:shadow-brand-coral/5 hover:bg-brand-coral/5 w-full"
               >
                 {/* Visual Header containing beautiful descriptive image */}
                 <div className="relative h-48 sm:h-52 overflow-hidden w-full bg-slate-100">
@@ -88,7 +88,7 @@ export default function Services({ onNavigatePage }: ServicesProps) {
                   
                   {/* Floating Action Button-Style Icon Box */}
                   <div className="flex items-center gap-3.5 mb-5">
-                    <div className="p-3 bg-brand-coral/5 border border-brand-coral/10 rounded-2xl text-brand-coral transition-colors duration-300 group-hover:bg-brand-coral/10">
+                    <div className="p-3 bg-brand-coral/5 border border-brand-coral/10 rounded-xl text-brand-coral transition-colors duration-300 group-hover:bg-brand-coral/10">
                       <IconComponent className="w-5.5 h-5.5" />
                     </div>
                     {/* Title */}

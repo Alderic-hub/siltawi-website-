@@ -48,7 +48,7 @@ export default function Portfolio() {
               onClick={() => setSelectedProject(item)}
             >
               {/* Image with high fidelity Overlay on Hover */}
-              <div className="relative aspect-[4/3] w-full rounded-[32px] overflow-hidden bg-slate-100 border border-slate-100 shadow-sm group-hover:shadow-xl transition-all duration-300">
+              <div className="relative aspect-[4/3] w-full rounded-2xl overflow-hidden bg-slate-100 border border-slate-100 shadow-sm group-hover:shadow-xl transition-all duration-300">
                 <img
                   src={item.imageUrl}
                   alt={item.title}
@@ -57,22 +57,16 @@ export default function Portfolio() {
                 />
                 
                 {/* Overlay: Service provided & short summary/description of what we achieved */}
-                <div className="absolute inset-0 bg-gradient-to-t from-slate-950/95 via-slate-950/80 to-slate-900/40 opacity-0 group-hover:opacity-100 transition-opacity duration-305 flex flex-col justify-end p-6 text-left">
-                  <span className="text-[10px] uppercase font-bold text-brand-gold font-mono tracking-widest mb-1.5">
+                <div className="absolute inset-0 bg-slate-950/85 backdrop-blur-[1.5px] opacity-0 group-hover:opacity-100 transition-opacity duration-305 flex flex-col justify-end p-4 sm:p-5 md:p-6 pb-8 sm:pb-10 md:pb-12 text-left">
+                  <span className="text-[9px] sm:text-[10px] md:text-[10px] lg:text-[9px] xl:text-[11px] uppercase font-extrabold text-brand-gold font-mono tracking-widest mb-1 sm:mb-1.5">
                     {item.categoryLabel}
                   </span>
-                  <h4 className="text-white text-base font-bold font-display leading-snug mb-2">
+                  <h4 className="text-white text-sm sm:text-base md:text-base lg:text-sm xl:text-lg font-bold font-display leading-tight mb-1 sm:mb-2 line-clamp-1">
                     {item.title}
                   </h4>
-                  <p className="text-xs text-slate-300 font-light leading-relaxed mb-4">
+                  <p className="text-[11px] sm:text-xs md:text-xs lg:text-[11px] xl:text-sm text-slate-300 font-light leading-relaxed line-clamp-2 sm:line-clamp-3">
                     {item.summary}
                   </p>
-                  <div className="flex justify-between items-center text-[11px] text-slate-450 border-t border-white/10 pt-3">
-                    <span className="font-mono text-slate-300">Year: {item.year}</span>
-                    <div className="w-8 h-8 rounded-lg bg-white/10 hover:bg-white/20 flex items-center justify-center text-white backdrop-blur-md">
-                      <Eye className="w-4 h-4" />
-                    </div>
-                  </div>
                 </div>
               </div>
 
@@ -109,7 +103,7 @@ export default function Portfolio() {
                 animate={{ opacity: 1, scale: 1, y: 0 }}
                 exit={{ opacity: 0, scale: 0.95, y: 15 }}
                 transition={{ type: 'spring', duration: 0.45 }}
-                className="relative bg-white border border-slate-100 shadow-2xl rounded-[36px] max-w-3xl w-full max-h-[92vh] overflow-y-auto text-left z-10"
+                className="relative bg-white border border-slate-100 shadow-2xl rounded-2xl max-w-3xl w-full max-h-[92vh] overflow-y-auto text-left z-10"
               >
                 {/* Floating dismiss button */}
                 <button
@@ -169,7 +163,7 @@ export default function Portfolio() {
                   </div>
 
                   {/* Right Column Structured Stats Block */}
-                  <div className="md:col-span-4 space-y-4 bg-slate-50 border border-slate-100 p-5 rounded-3xl h-fit">
+                  <div className="md:col-span-4 space-y-4 bg-slate-50 border border-slate-100 p-5 rounded-2xl h-fit">
                     <h4 className="text-[10px] uppercase font-mono tracking-wider text-slate-400 font-bold pb-2 border-b border-slate-200">
                       Client Engagement Details
                     </h4>
@@ -190,7 +184,7 @@ export default function Portfolio() {
                         <span className="text-[9px] font-mono tracking-wider text-brand-coral uppercase font-bold block mb-1">
                           Campaign Outcome
                         </span>
-                        <div className="bg-white border border-slate-100 rounded-2xl p-3 shadow-inner">
+                        <div className="bg-white border border-slate-100 rounded-xl p-3 shadow-inner">
                           <span className="text-2xl font-black font-display text-slate-900 block leading-tight">
                             {selectedProject.stats.value}
                           </span>

@@ -57,7 +57,7 @@ export default function FaqPage({ onBackToHome }: FaqPageProps) {
               <div
                 id={`faq-accordion-${faq.id}`}
                 key={faq.id}
-                className="bg-slate-50 border border-slate-100 rounded-3xl overflow-hidden transition-all duration-200"
+                className="bg-slate-50 border border-slate-100 rounded-2xl overflow-hidden transition-all duration-200"
               >
                 <button
                   id={`faq-trigger-${faq.id}`}
@@ -94,7 +94,7 @@ export default function FaqPage({ onBackToHome }: FaqPageProps) {
         </div>
 
         {/* Post-FAQ Call-To-Action Block */}
-        <div className="mt-16 p-8 rounded-[32px] bg-slate-50 border border-slate-100 flex flex-col sm:flex-row sm:items-center sm:justify-between gap-6">
+        <div className="mt-16 p-8 rounded-2xl bg-slate-50 border border-slate-100 flex flex-col sm:flex-row sm:items-center sm:justify-between gap-6">
           <div className="space-y-1">
             <h4 className="text-lg font-bold font-display text-slate-900">Still have inquiries?</h4>
             <p className="text-xs text-slate-500 font-light font-sans">We're glad to discuss custom features or scale estimates for your firms.</p>

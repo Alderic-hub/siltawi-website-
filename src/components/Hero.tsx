@@ -54,6 +54,7 @@ export default function Hero({ onNavigateToContact, onNavigateToServices }: Hero
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.6, delay: 0.2 }}
               className="text-slate-600 max-w-xl text-base sm:text-lg lg:text-xl font-light leading-relaxed mb-4"
+              style={{ textShadow: '0 1px 4px rgba(255, 255, 255, 0.8)' }}
             >
               We help businesses grow their online presence through branding, social media marketing, and world-class digital solutions.
             </motion.p>
@@ -71,7 +72,7 @@ export default function Hero({ onNavigateToContact, onNavigateToServices }: Hero
                 onClick={onNavigateToContact}
                 className="inline-flex items-center justify-center gap-2 px-6 py-3 rounded-xl font-bold text-xs uppercase tracking-wider text-white bg-brand-gradient hover:bg-brand-gradient-hover shadow-xl shadow-brand/20 transition-all duration-300 transform hover:scale-105 cursor-pointer"
               >
-                View Our Work
+                Contact Us
                 <ArrowRight className="w-4 h-4" />
               </button>
               <button
@@ -93,7 +94,7 @@ export default function Hero({ onNavigateToContact, onNavigateToServices }: Hero
               initial={{ opacity: 0, scale: 0.95 }}
               animate={{ opacity: 1, scale: 1 }}
               transition={{ duration: 0.8, delay: 0.2 }}
-              className="relative mx-auto max-w-[420px] lg:max-w-none shadow-2xl rounded-3xl overflow-hidden bg-slate-900 border border-slate-800 p-4 aspect-[4/3] flex flex-col justify-between select-none group"
+              className="relative mx-auto max-w-[420px] lg:max-w-none shadow-2xl rounded-2xl overflow-hidden bg-slate-900 border border-slate-800 p-4 aspect-[4/3] flex flex-col justify-between select-none group"
             >
               {/* Decorative browser dots & URL */}
               <div id="visual-browser-header" className="flex items-center justify-between border-b border-slate-800 pb-3 mb-2 z-10">
@@ -169,7 +170,7 @@ export default function Hero({ onNavigateToContact, onNavigateToServices }: Hero
               </div>
 
               {/* Lower Section footer with custom micro glassmorphism layout */}
-              <div id="visual-footer" className="mt-2.5 bg-slate-900/60 backdrop-blur-md border border-slate-700/40 p-2.5 rounded-xl flex items-center justify-between z-10 shadow-md opacity-90">
+              <div id="visual-footer" className="mt-2.5 bg-slate-900/60 backdrop-blur-md border border-slate-700/40 p-2.5 rounded-2xl flex items-center justify-between z-10 shadow-md opacity-90">
                 <div className="flex items-center gap-2">
                   <div className="w-7 h-7 rounded-lg bg-brand-coral/15 flex items-center justify-center border border-brand-coral/20">
                     <Heart className="w-3.5 h-3.5 text-brand-coral fill-brand-coral/20" />
@@ -218,7 +219,7 @@ export default function Hero({ onNavigateToContact, onNavigateToServices }: Hero
       {/* Full-width premium background of the creative office interior, fading seamlessly to the left */}
       <div 
         id="hero-ambient-office-bg"
-        className="absolute inset-y-0 right-0 w-full sm:w-[85%] md:w-[70%] lg:w-[60%] pointer-events-none -z-20 overflow-hidden opacity-[0.45] md:opacity-[0.55] transition-opacity duration-350"
+        className="absolute inset-y-0 right-0 w-full sm:w-[85%] md:w-[70%] lg:w-[60%] pointer-events-none -z-20 overflow-hidden opacity-[0.2] sm:opacity-[0.35] md:opacity-[0.55] transition-opacity duration-350"
         style={{
           maskImage: 'linear-gradient(to right, rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 0.5) 20%, rgba(0, 0, 0, 1) 100%)',
           WebkitMaskImage: 'linear-gradient(to right, rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 0.5) 20%, rgba(0, 0, 0, 1) 100%)'

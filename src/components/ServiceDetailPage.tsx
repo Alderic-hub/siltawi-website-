@@ -81,7 +81,7 @@ export default function ServiceDetailPage({ service, onBackToHome }: ServiceDeta
                 return (
                   <div
                     key={sIdx}
-                    className="p-6 bg-slate-50 border border-slate-100 rounded-3xl space-y-2 hover:border-brand-coral/20 hover:bg-white hover:shadow-md transition-all duration-300"
+                    className="p-6 bg-slate-50 border border-slate-100 rounded-2xl space-y-2 hover:border-brand-coral/20 hover:bg-white hover:shadow-md transition-all duration-300"
                   >
                     <h4 className="font-bold font-display text-slate-900 text-sm sm:text-base">
                       {sub.name}
@@ -96,7 +96,7 @@ export default function ServiceDetailPage({ service, onBackToHome }: ServiceDeta
           </div>
 
           {/* Right Column: Key Features Checklist Highlights card */}
-          <div className="lg:col-span-5 bg-slate-50 border border-slate-100 p-8 rounded-[32px] space-y-6">
+          <div className="lg:col-span-5 bg-slate-50 border border-slate-100 p-8 rounded-2xl space-y-6">
             <h3 className="text-lg font-bold font-display text-slate-900">
               Core Deliverables Checklist
             </h3>
@@ -134,9 +134,9 @@ export default function ServiceDetailPage({ service, onBackToHome }: ServiceDeta
                 return (
                   <div
                     key={proj.id}
-                    className="p-6 bg-slate-50 border border-slate-100 rounded-[32px] flex flex-col md:flex-row gap-6 hover:shadow-lg transition-all"
+                    className="p-6 bg-slate-50 border border-slate-100 rounded-2xl flex flex-col md:flex-row gap-6 hover:shadow-lg transition-all"
                   >
-                    <div className="w-full md:w-1/3 aspect-[4/3] rounded-2.5xl overflow-hidden bg-slate-200 shrink-0">
+                    <div className="w-full md:w-1/3 aspect-[4/3] rounded-2xl overflow-hidden bg-slate-200 shrink-0">
                       <img
                         src={proj.imageUrl}
                         alt={proj.client}

@@ -74,7 +74,7 @@ export default function Contact() {
           
           {/* Left Column - Google Map Section */}
           <div id="contact-map-panel" className="lg:col-span-5 h-full flex flex-col justify-between order-last">
-            <div id="google-map-container" className="rounded-[32px] overflow-hidden border border-slate-200/80 shadow-md h-full min-h-[350px] relative bg-slate-50">
+            <div id="google-map-container" className="rounded-2xl overflow-hidden border border-slate-200/80 shadow-md h-full min-h-[350px] relative bg-slate-50">
               <iframe
                 id="siltawi-embed-map"
                 title="Google Map location highlighting Siltawi Bole HQ Addis Ababa"
@@ -90,7 +90,7 @@ export default function Contact() {
           </div>
 
           {/* Right Column - Interactive Form Panel with validation & sub states */}
-          <div id="contact-form-panel" className="lg:col-span-7 bg-slate-50 border border-slate-100 rounded-[32px] p-6 sm:p-10 order-first">
+          <div id="contact-form-panel" className="lg:col-span-7 bg-slate-50 border border-slate-100 rounded-2xl p-6 sm:p-10 order-first">
             <AnimatePresence mode="wait">
               {!isSubmitted ? (
                 <motion.form
